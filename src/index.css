@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-brand-50: #eef7f6;
+  --color-brand-100: #d5ece9;
+  --color-brand-200: #aedad5;
+  --color-brand-300: #7cc1ba;
+  --color-brand-400: #4ba29a;
+  --color-brand-500: #2d857f;
+  --color-brand-600: #1f6a67;
+  --color-brand-700: #1a5453;
+  --color-brand-800: #174443;
+  --color-brand-900: #143838;
+  --color-brand-950: #082525;
+
+  --shadow-card: 0 1px 3px rgba(15, 42, 40, 0.06), 0 1px 2px rgba(15, 42, 40, 0.04);
+
+  --animate-fade-in-up: fade-in-up 0.35s ease-out both;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-slate-100 text-slate-800 font-sans;
+  }
+}
